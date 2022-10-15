@@ -6,8 +6,9 @@ interface StringChecker {
 
 class ListExamples implements StringChecker{
 
-  boolean checkString(String s) {
-    if(String.contains(s)) {
+  @Override
+  public boolean checkString(String s) {
+    if(s.length() > 6) {
       return true;
     }
     else {

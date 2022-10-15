@@ -19,6 +19,12 @@ public class ListTests {
         list.add("pineapple");
         list.add("grapes");
 
-        assertEquals(new String[] {"apple", "pineapple"}, ListExamples.filter(list, null));
+        StringChecker sc = new ListExamples();
+
+        List<String> expected = new ArrayList<>(); // new String[] {"strawberry", "pineapple"}
+        expected.add("strawberry");
+        expected.add("pineapple");
+
+        assertEquals(expected, ListExamples.filter(list, sc));
     }
 }
